@@ -1,0 +1,65 @@
+<div class="main_container">
+  <div class="header">
+    <div class="logo">TechGen</div>
+    <div class="menu">
+      <ul>
+        <li>Producto</li>
+        <li>Recursos</li>
+        <li>Soporte</li>
+        <li>Precios</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+    <button class="boton-demo" [routerLink]="['/auth/register']">
+      Registro
+    </button>
+  </div>
+
+  <div class="forms">
+    <div style="align-items: center; display: flex; flex-direction: column">
+      <p class="big_text">Inicia Sesión con tu Cuenta</p>
+      <p class="p_banner">
+        ¡Descubre más de 500,000 productos de las mejores marcas, con nuevos
+        artículos añadidos diariamente!
+      </p>
+    </div>
+
+    <div class="form_components">
+      <div class="form_inputs">
+        <input id="name" type="text" placeholder="Nombre de usuario" />
+        <input
+          id="pass"
+          type="password"
+          placeholder="Constraseña se seguridad"
+        />
+      </div>
+
+      <span>/</span>
+
+      <div class="form_btns">
+        <button class="submit" (click)="login()">
+          Iniciar Sesión
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fillRule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+            />
+          </svg>
+        </button>
+        <a href="">Olvidaste la contraseña?</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="privacy">Política de privacidad</p>
+    <p class="copy">Copyright@UCI 2024</p>
+  </footer>
+</div>

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "SpaceG";
+  src: url("./assets/font/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+:root {
+  color: white;
+  background: #0a0817;
+}
+
+* {
+  padding: 0;
+  font-family: "SpaceG";
+}

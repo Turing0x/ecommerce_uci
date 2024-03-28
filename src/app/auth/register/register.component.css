@@ -1,0 +1,147 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 45vw;
+}
+
+.form_components {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+}
+
+.big_text {
+  margin-top: 0;
+  font-size: 50px;
+  font-weight: 5001;
+  margin-bottom: 0;
+}
+
+.p_banner {
+  margin-top: 0;
+  color: #75797e;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu ul li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #00ff00;
+}
+
+.menu ul li {
+  margin-right: 20px;
+}
+
+.boton-demo {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton-demo::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Ajusta la posición vertical de la línea */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Ajusta el ancho de la línea a tu gusto */
+  border-bottom: 2px solid #00ff00; /* Tu color de línea deseado */
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  height: 35px;
+  width: 250px;
+  padding: 0 20px;
+  background-color: #222222;
+  border: none;
+  color: #666666;
+  border-radius: 5px;
+}
+
+input,
+input::placeholder {
+  font: 15px "SpaceG";
+  color: #666666;
+}
+
+.submit {
+  background: linear-gradient(
+    to right,
+    #03ac87,
+    #cebf71
+  ); /* Gradiente de #00C299 a #E0CD71 */
+  color: black; /* Texto blanco */
+  font-weight: 450;
+  border: 2px solid #0a0817; /* Borde verde */
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px;
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  font-size: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.privacy {
+  margin-left: 20px;
+}
+
+.copy {
+  margin-right: 20px;
+}

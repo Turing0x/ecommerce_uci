@@ -1,0 +1,24 @@
+<main>
+  <custom_navbar />
+  <div *ngIf="!is_loading; else loading">
+    <custom-main-container [product_list]="product_list" />
+  </div>
+</main>
+
+<ng-template #loading>
+  <div
+    class="div"
+    style="
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      padding: 150px;
+      text-align: center;
+    "
+  >
+    Buscando información. Espere unos segundos por favor.
+  </div>
+</ng-template>

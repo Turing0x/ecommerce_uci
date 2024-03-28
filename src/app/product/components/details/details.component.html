@@ -1,0 +1,52 @@
+<div class="main_info_product" *ngIf="!is_loading; else loading">
+  <section class="info_product">
+    <p class="title" style="margin-bottom: 10px">{{ product.title }}</p>
+    <p class="description" style="margin-top: 0">{{ product.description }}</p>
+    <p class="price">${{ product.price }}</p>
+
+    <div
+      class="actions"
+      style="
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+        margin-top: 60px;
+      "
+    >
+      <div class="buy">comprar ahora</div>
+      <div class="favorite">favorito</div>
+    </div>
+  </section>
+
+  <div class="photo">
+    <img
+      src="{{ product.image }}"
+      alt="{{ product.title }}"
+      style="
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+      "
+    />
+  </div>
+</div>
+
+<ng-template #loading>
+  <div
+    class="div"
+    style="
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      padding: 150px;
+      text-align: center;
+    "
+  >
+    Buscando información. Espere unos segundos por favor.
+  </div>
+</ng-template>

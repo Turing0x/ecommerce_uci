@@ -1,0 +1,23 @@
+:host {
+  --main-bg-color: #141519;
+  --hover-bg-color: #1a1d21;
+  --icon-color: #9b9b9b;
+  --title-color: #9b9b9b;
+  --hover-title-color: white;
+  --navbar-width: 300px;
+  --navbar-height: 100%;
+  --padding-size: 10px 20px;
+  --li-padding: 15px 15px;
+  --li-margin: 5px 0;
+  --icon-font-size: 16px;
+  --title-font-size: 16px;
+  --settings-margin-top: 20px;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
