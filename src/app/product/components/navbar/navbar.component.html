@@ -9,20 +9,30 @@
     "
   >
     <div class="logo">TechGen</div>
-    <ion-icon name="log-out-outline"></ion-icon>
+    <span (click)="logout()" [routerLink]="['/auth/']">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </span>
   </div>
 
   <ul>
     <div class="menu">
       <span class="opcions_title">Menu</span>
-      <li class="clicked" [routerLink]="['/products/list']">
+      <li
+        id="1"
+        (click)="saveRoute('/products/list', '1')"
+        [routerLink]="['/products/list']"
+      >
         <div class="icon">
           <ion-icon name="list-outline"></ion-icon>
         </div>
         <div class="title">Lista de productos</div>
       </li>
 
-      <li [routerLink]="['/products/cart']">
+      <li
+        id="2"
+        (click)="saveRoute('/products/cart', '2')"
+        [routerLink]="['/products/cart']"
+      >
         <div class="icon">
           <ion-icon name="cart-outline"></ion-icon>
         </div>

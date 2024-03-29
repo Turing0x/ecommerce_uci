@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/models/product';
+import { CartService } from 'src/services/cart.service';
 import { ProductService } from 'src/services/product.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class DetailsComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ){}
 
   ngOnInit(): void {
@@ -26,6 +28,7 @@ export class DetailsComponent implements OnInit{
         if (id) {
           this.productService.getProductById(id).subscribe(
             prod => {
+              prod.cant = 1
               this.product = prod
               this.is_loading = false
             }
@@ -35,6 +38,12 @@ export class DetailsComponent implements OnInit{
     )
   }
 
-  
+  onClick(product: Product) {
+    this.cartService.actionsOnCart(product)
+  }
+
+  isInCart(product: Product): boolean {
+    return this.cartService.isInCart(product)
+  }
   
 }

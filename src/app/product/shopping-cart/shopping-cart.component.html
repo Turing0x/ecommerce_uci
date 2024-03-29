@@ -1,1 +1,92 @@
-<p>shopping-cart works!</p>,
+<section class="main_list_container" style="height: 100%">
+  <div
+    style="
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-top: 15px;
+      padding-right: 50px;
+    "
+  >
+    <span style="display: flex; flex-direction: column">
+      <span style="font-size: 20px; font-weight: bold"
+        >Carrito de la Compra</span
+      >
+      <span style="color: #7f828e; margin-bottom: 10px"
+        >Tienes {{ product_list.length }} productos en tu carrito</span
+      >
+    </span>
+
+    <span class="subtotal"> Monto de la compra: ${{ totalAmount() }} </span>
+    <span class="remove" (click)="cleanCart()"> Limpiar Carrito </span>
+  </div>
+
+  <div class="list_box" *ngIf="product_list.length !== 0; else emptyCart">
+    <div class="each_product" *ngFor="let product of product_list">
+      <div class="main_info">
+        <div class="photo">
+          <img
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+            style="
+              width: 100px;
+              height: 100px;
+              object-fit: cover;
+              border-radius: 10px;
+            "
+          />
+        </div>
+
+        <div
+          class="info_prod"
+          style="
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+            padding: 10px 0;
+            width: 350px;
+          "
+        >
+          <span class="category">{{ product.category }}</span>
+          <span class="title" style="text-overflow: ellipsis">{{
+            product.title
+          }}</span>
+          <span class="edition" style="color: #7f828e">EDICIÓN LIMITADA</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <span class="less" (click)="actionsOnCantToBy(product.id, -1)">-</span>
+        <span class="cant">{{ product.cant }}</span>
+        <span class="plus" (click)="actionsOnCantToBy(product.id, +1)">+</span>
+      </div>
+
+      <span class="price"> ${{ product.price * product.cant }} </span>
+
+      <span class="remove" (click)="removeProductById(product.id)">
+        Quitar
+      </span>
+    </div>
+  </div>
+</section>
+
+<ng-template #emptyCart>
+  <div
+    class="div"
+    style="
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      padding: 150px;
+      text-align: center;
+    "
+  >
+    No hay productos en su carrito de la compra
+  </div>
+</ng-template>

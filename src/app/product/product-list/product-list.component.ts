@@ -8,38 +8,25 @@ import { ProductService } from 'src/services/product.service';
   styleUrls: ['./product-list.component.css'],
 })
   
-export class ProductListComponent implements OnInit, AfterViewInit{
-
-  product_list: Product[] = []
+export class ProductListComponent implements OnInit {
+    
+  product_list: Product[] = [];
   is_loading: boolean = true;
 
   constructor(
-    private productServices: ProductService
+    private productServices: ProductService,
   ) { }
 
   ngOnInit(): void {
     this.productServices.getAllProdcuts().subscribe(
       list => {
-        this.product_list = list
-        this.is_loading = false
+        for (const item of list) {
+          item.cant = 1;
+          this.product_list.push(item);
+        }
+        this.is_loading = false;
       }
-    )
-  }
-  
-  ngAfterViewInit(): void {
-    this.addClicked()
+    );
   }
 
-  addClicked() {
-    let list = document.querySelectorAll(".navbar li");
-    function activeLink(this: any) {
-      list.forEach((item) => {
-        item.classList.remove("clicked");
-      });
-      this.classList.add("clicked");
-    }
-    list.forEach((item) => {
-      item.addEventListener("click", activeLink);
-    });
-  }
 }

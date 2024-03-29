@@ -14,7 +14,9 @@
         margin-top: 60px;
       "
     >
-      <div class="buy">comprar ahora</div>
+      <div class="buy" (click)="onClick(product)">
+        {{ isInCart(product) ? "quitar del carrito" : "comprar ahora" }}
+      </div>
       <div class="favorite">favorito</div>
     </div>
   </section>

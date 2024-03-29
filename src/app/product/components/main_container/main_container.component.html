@@ -48,9 +48,15 @@
               align-items: center;
             "
           >
-            <button class="add_to_cart">
+            <button
+              class="add_to_cart"
+              (click)="onClick(product)"
+              [className]=""
+            >
               <ion-icon name="cart-outline" style="font-size: 16px"></ion-icon>
-              Añadir al Carrito
+              {{
+                isInCart(product) ? "Quitar del Carrito" : "Añadir al Carrito"
+              }}
             </button>
 
             <a
