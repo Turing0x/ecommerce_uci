@@ -9,6 +9,8 @@ import { IonicModule } from '@ionic/angular';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainContainerComponent } from './components/main_container/main_container.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { LayoutPageComponent } from './layout-page/layout-page.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,9 @@ import { DetailsComponent } from './components/details/details.component';
   ],
   declarations: [
     MainContainerComponent,
+    ShoppingCartComponent,
     ProductListComponent,
+    LayoutPageComponent,
     DetailsComponent,
     NavbarComponent
   ],

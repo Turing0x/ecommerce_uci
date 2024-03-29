@@ -1,9 +1,6 @@
-<main>
-  <custom_navbar />
-  <div *ngIf="!is_loading; else loading">
-    <custom-main-container [product_list]="product_list" />
-  </div>
-</main>
+<div class="main_list" *ngIf="!is_loading; else loading">
+  <custom-main-container [product_list]="product_list" />
+</div>
 
 <ng-template #loading>
   <div

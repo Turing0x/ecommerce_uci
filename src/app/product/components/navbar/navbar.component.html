@@ -15,14 +15,14 @@
   <ul>
     <div class="menu">
       <span class="opcions_title">Menu</span>
-      <li class="clicked">
+      <li class="clicked" [routerLink]="['/products/list']">
         <div class="icon">
           <ion-icon name="list-outline"></ion-icon>
         </div>
         <div class="title">Lista de productos</div>
       </li>
 
-      <li>
+      <li [routerLink]="['/products/cart']">
         <div class="icon">
           <ion-icon name="cart-outline"></ion-icon>
         </div>

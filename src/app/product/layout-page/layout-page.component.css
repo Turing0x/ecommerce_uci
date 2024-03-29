@@ -14,7 +14,7 @@
   --settings-margin-top: 20px;
 }
 
-.main_list {
+main {
   position: relative;
   display: flex;
   flex-direction: row;
