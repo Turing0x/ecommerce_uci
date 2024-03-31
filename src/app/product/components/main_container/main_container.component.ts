@@ -24,6 +24,4 @@ export class MainContainerComponent {
     return this.cartService.isInCart(product)
   }
 
-  
-
 }
