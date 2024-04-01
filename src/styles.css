@@ -7,7 +7,9 @@
 
 :root {
   color: white;
-  background: #0a0817;
+  background: #000000;
+  background: -webkit-linear-gradient(to left, #434343, #000000);
+  background: linear-gradient(to left, #434343, #000000);
 }
 
 * {
